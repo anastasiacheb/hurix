@@ -1,0 +1,72 @@
+@use '../abstracts' as *;
+
+.footer {
+  margin: 4.8rem;
+  @include column;
+  gap: 4.8rem;
+
+  @include desktop {
+    max-width: 100rem;
+    margin: 9.2rem auto;
+  }
+
+  &__content {
+    @include column;
+    gap: 4.8rem;
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: end;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 4rem;
+
+    @include tablet {
+      width: 60%;
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__wrap {
+    @include column;
+    gap: 1.2rem;
+    width: 50%;
+  }
+
+  &__links {
+    @include column;
+    gap: 0.8rem;
+  }
+
+  &__form {
+    @include tablet {
+      width: 100%;
+      flex-basis: 30rem;
+    }
+  }
+
+  &__input {
+    margin: 0.4rem 0 0.8rem 0;
+  }
+
+  &__foot {
+    @include column;
+    gap: 2.4rem;
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    gap: 4.8rem;
+  }
+}

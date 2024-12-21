@@ -1,0 +1,43 @@
+@use '../abstracts' as *;
+
+.button {
+  color: $black;
+  @include inter;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  background: $gradient-back;
+  padding: 1rem 1.6rem;
+  border-radius: 5.4rem;
+  width: max-content;
+}
+
+.button_big {
+  width: 100%;
+  border-radius: 0.6rem;
+  height: 4.2rem;
+}
+
+.tag {
+  position: relative;
+  z-index: -1;
+  width: max-content;
+  @include inter;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  backdrop-filter: blur(12px);
+  padding: 0.4rem 1.6rem;
+  border-radius: 2rem;
+  background: linear-gradient(
+    100.11deg,
+    rgba(254, 141, 148, 0.04) 0%,
+    rgba(159, 84, 255, 0.04) 100%
+  );
+  box-shadow: inset 0px -4px 52px rgba(212, 158, 255, 0.12);
+
+  & > span {
+    background: $gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}

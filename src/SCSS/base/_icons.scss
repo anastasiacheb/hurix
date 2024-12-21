@@ -1,0 +1,68 @@
+@use '../abstracts' as *;
+
+.logo {
+  width: auto;
+  height: 3rem;
+}
+
+.logo_size-s {
+  width: 12rem;
+  height: auto;
+}
+
+.logo_size-m {
+  width: 14rem;
+  height: auto;
+}
+
+.logo_size-l {
+  width: 16rem;
+  height: auto;
+}
+
+.icon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.icon_size-s {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.icon_size-m {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.icon_size-l {
+  width: 3.7rem;
+  height: auto;
+}
+
+.icon_size-xl {
+  width: 4.3rem;
+  height: auto;
+}
+
+.icon_size-xxl {
+  width: 7rem;
+  height: auto;
+}
+
+.icon__wrap_dark {
+  @include center;
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 100%;
+  border: $border_bright;
+  @include background;
+}
+
+.icon__wrap_bright {
+  @include center;
+  width: 5.6rem;
+  height: 5.6rem;
+  border-radius: 100%;
+  background: $gradient;
+}

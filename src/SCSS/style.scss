@@ -1,0 +1,25 @@
+@use 'abstracts' as *;
+@use 'base';
+@use 'components';
+@use 'layout';
+
+.elem {
+  &_mobile {
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &_tablet {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+  }
+}
+
+.invisible {
+  opacity: 0;
+  transition: all 1s;
+}

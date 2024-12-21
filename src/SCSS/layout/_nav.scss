@@ -1,0 +1,114 @@
+@use '../abstracts' as *;
+
+.nav {
+  margin: 3.6rem 1.6rem;
+  padding: 1.6rem 2.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include background;
+  border-radius: 8rem;
+  position: relative;
+  transition: all 1s;
+
+  @include desktop {
+    max-width: 120rem;
+    margin: 3.3rem auto;
+  }
+
+  &__line {
+    width: 2rem;
+    height: 0.2rem;
+    background: $gradient;
+    border-radius: 0.2rem;
+    transition: $transition;
+
+    &_mid {
+      width: 1.4rem;
+    }
+  }
+
+  &__burger {
+    @include column;
+    gap: 0.4rem;
+
+    @include tablet {
+      display: none;
+    }
+
+    &.active {
+      .nav__line {
+        &_top {
+          transform: translateY(0.6rem) rotate(45deg);
+        }
+
+        &_mid {
+          opacity: 0;
+        }
+
+        &_bot {
+          transform: translateY(-0.6rem) rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  &__menu {
+    @include column;
+    position: absolute;
+    top: 6.4rem;
+    left: 0;
+    background-color: $black;
+    width: 100%;
+    height: 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    transition: $transition;
+    overflow: hidden;
+    z-index: 2000;
+
+    &.active {
+      height: calc(100vh - 3.6rem - 6.4rem);
+      gap: 4rem;
+    }
+
+    @include tablet {
+      position: static;
+      flex-direction: row;
+      gap: 0.8rem;
+      height: auto;
+      width: auto;
+      background-color: transparent;
+
+      &.active {
+        gap: 0.8rem;
+        height: auto;
+      }
+    }
+  }
+
+  &__link {
+    color: $white;
+    @include inter;
+    font-size: 2.4rem;
+    line-height: 3.4rem;
+
+    @include tablet {
+      font-size: 1.4rem;
+      line-height: 2.4rem;
+      padding: 0.8rem 1.6rem;
+    }
+
+    &.active {
+      background: $gradient;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+
+  &__button {
+    width: auto;
+  }
+}

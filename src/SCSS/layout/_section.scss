@@ -1,0 +1,322 @@
+@use '../abstracts' as *;
+
+.section {
+  margin: 0 1.6rem;
+  padding: 9.2rem 0;
+  overflow: hidden;
+
+  @include desktop {
+    max-width: 100rem;
+    margin: auto;
+  }
+
+  &__tag {
+    margin-bottom: 1.6rem;
+
+    &_centered {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__title {
+    margin-bottom: 4rem;
+  }
+
+  &_centered {
+    text-align: center;
+  }
+}
+
+.section-logo {
+  text-align: center;
+  overflow: hidden;
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 4.8rem;
+    row-gap: 2.4rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.6rem;
+  }
+}
+
+.section-res {
+  overflow: hidden;
+
+  &__content {
+    @include column;
+    gap: 2.4rem;
+    margin-bottom: 3.2rem;
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: end;
+      margin-bottom: 6.4rem;
+    }
+  }
+
+  &__title {
+    max-width: 50rem;
+    @include column;
+    gap: 1.2rem;
+  }
+
+  &__text {
+    @include column;
+    gap: 1.2rem;
+  }
+
+  &__list {
+    @include column;
+    gap: 0.8rem;
+  }
+
+  &__bullet::before {
+    content: url('/icons/Frame.svg');
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-right: 0.8rem;
+    vertical-align: text-top;
+  }
+
+  &__image {
+    position: relative;
+  }
+
+  &__image2 {
+    margin-top: -14%;
+    transform: translateX(126%);
+
+    @include tablet {
+      margin-top: 0;
+      transform: translateX(0);
+      position: absolute;
+      top: 2.4rem;
+      left: 60%;
+    }
+  }
+
+  &__image3 {
+    @include tablet {
+      position: absolute;
+      top: 35%;
+      left: 70%;
+    }
+  }
+}
+
+.section-feed {
+  overflow: hidden;
+
+  &__title {
+    margin-bottom: 6.4rem;
+    text-align: center;
+  }
+
+  &__content {
+    @include column;
+    gap: 8rem;
+  }
+
+  &__wrap {
+    @include column;
+    gap: 4rem;
+    //align-items: center;
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      &_reverse {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  &__image {
+    margin: 0 2.4rem;
+
+    @include tablet {
+      margin: 0;
+    }
+  }
+
+  &__container {
+    //width: 100%;
+    max-width: 43rem;
+  }
+
+  &__heading {
+    margin-bottom: 1.2rem;
+  }
+
+  &__list {
+    margin-top: 3.2rem;
+    @include column;
+    gap: 1.6rem;
+  }
+
+  &__item {
+    display: flex;
+    gap: 1.6rem;
+    align-items: center;
+  }
+
+  &__inner {
+    @include column;
+    gap: 0.4rem;
+  }
+
+  &__text {
+    @include column;
+    gap: 2.4rem;
+  }
+
+  &__tags {
+    display: flex;
+    gap: 1.6rem;
+  }
+
+  &__bullet::before {
+    content: url('/icons/check-verified-01.svg');
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-right: 0.8rem;
+    vertical-align: middle;
+  }
+}
+
+.section-con {
+  overflow: hidden;
+
+  &__wrap {
+    @include column;
+    gap: 1.2rem;
+    align-items: center;
+
+    @include tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}
+
+.section-cli {
+  padding: 9.2rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  &__decor {
+    position: absolute;
+    z-index: 1000;
+
+    &_bot {
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 50%;
+    }
+
+    &_left {
+      left: 0;
+      bottom: 0;
+      height: 70%;
+      width: 20rem;
+
+      @include tablet {
+        width: 40rem;
+      }
+    }
+
+    &_right {
+      right: 0;
+      bottom: 0;
+      height: 70%;
+      width: 20rem;
+
+      @include tablet {
+        width: 40rem;
+      }
+    }
+  }
+
+  &__wrap,
+  .swiper {
+    width: 100%;
+    //overflow-x: scroll;
+    //pointer-events: none;
+  }
+
+  &__slider,
+  .swiper-wrapper {
+    //display: flex;
+    //gap: 2.4rem;
+    //justify-content: center;
+    transition-timing-function: linear !important;
+  }
+
+  &__slide,
+  .swiper-slide {
+    @include column;
+    gap: 2.4rem;
+    flex: 1 1 0px;
+  }
+}
+
+.section-form {
+  position: relative;
+  max-width: 38.4rem;
+  margin: auto;
+  //overflow: clip;
+
+  &__wrap {
+    overflow: clip;
+  }
+
+  &__form {
+    position: relative;
+    filter: none;
+    //background-color: $black;
+  }
+
+  &__image_left {
+    position: absolute;
+    bottom: 135px;
+    left: -35px;
+    transition: $transition;
+    transform: rotate(-16deg) !important;
+
+    &:hover {
+      bottom: 100px;
+      left: 0px;
+      transform: rotate(0deg);
+    }
+  }
+
+  &__image_right {
+    position: absolute;
+    bottom: 135px;
+    right: -35px;
+    transform: rotate(16deg) !important;
+  }
+}
+
+.section-blog {
+  &__content {
+    @include column;
+    gap: 3.2rem;
+
+    @include tablet {
+      flex-direction: row;
+    }
+  }
+}

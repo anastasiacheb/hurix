@@ -1,0 +1,25 @@
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin background {
+  backdrop-filter: blur(12px);
+  background: linear-gradient(
+      180deg,
+      rgba(254, 227, 213, 0.03) 0%,
+      rgba(255, 165, 193, 0.03) 100%
+    ),
+    linear-gradient(
+      204.93deg,
+      rgba(4, 5, 9, 0.1) -72.87%,
+      rgba(255, 255, 255, 0) 109.39%
+    );
+  box-shadow: inset 0px -1px 1px rgba(255, 255, 255, 0.04);
+}

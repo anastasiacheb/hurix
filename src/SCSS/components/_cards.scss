@@ -1,0 +1,166 @@
+@use '../abstracts' as *;
+
+.card-icon {
+  display: flex;
+  gap: 1.6rem;
+  padding: 2rem;
+  @include background;
+  border-radius: 5rem;
+  width: 32.4rem;
+  text-align: center;
+
+  &__text {
+    @include column;
+    gap: 0.4rem;
+    text-align: start;
+  }
+}
+
+.card-cli {
+  @include background;
+  border: $border;
+  border-radius: 1.6rem;
+  padding: 2rem;
+  text-align: left;
+  width: 38.4rem;
+
+  &__header {
+    background: linear-gradient(
+        180deg,
+        rgba(254, 227, 213, 0.035) 0%,
+        rgba(255, 165, 193, 0.035) 100%
+      ),
+      linear-gradient(
+        204.93deg,
+        rgba(4, 5, 9, 0.098) -72.87%,
+        rgba(255, 255, 255, 0) 109.39%
+      );
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 0.8rem;
+    padding: 1.2rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+
+    &::after {
+      background: linear-gradient(
+        110.45deg,
+        #feece3 0%,
+        #fcd5bf 25%,
+        #feafae 50%,
+        #ffa4bd 75%,
+        #ffa9cc 100%
+      );
+      opacity: 0.3;
+      content: '';
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      left: 310px;
+      top: 10px;
+      filter: blur(42px);
+      //border: 1px solid white;
+    }
+  }
+
+  &__title {
+    @include column;
+    gap: 0.4rem;
+    align-items: start;
+  }
+}
+
+.card-form {
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.02),
+      rgba(255, 255, 255, 0.02)
+    ),
+    radial-gradient(
+      995.25% 901.14% at 50% -800%,
+      rgba(0, 0, 0, 0) 96%,
+      rgba(255, 255, 255, 0.01) 100%
+    ),
+    radial-gradient(
+      280.6% 254.07% at 50% -150%,
+      rgba(0, 0, 0, 0) 60%,
+      rgba(255, 255, 255, 0.01) 100%
+    ),
+    #040509;
+  //box-shadow: inset 0px 1px 1.5px 1px rgba(47, 47, 76, 0.64), inset 0px -28px 84px -23px rgba(255, 255, 255, 0.02);
+  //filter: blur(50px);
+  border: $border;
+  padding: 2rem;
+  border-radius: 1.6rem;
+  max-width: 38.4rem;
+  text-align: left;
+  margin: auto;
+
+  &__form {
+    padding-top: 2.4rem;
+    padding-bottom: 1.6rem;
+    @include column;
+    gap: 1.4rem;
+    position: relative;
+
+    &::after {
+      background: linear-gradient(
+        110.45deg,
+        #feece3 0%,
+        #fcd5bf 25%,
+        #feafae 50%,
+        #ffa4bd 75%,
+        #ffa9cc 100%
+      );
+      opacity: 0.3;
+      content: '';
+      position: absolute;
+      width: 56px;
+      height: 60px;
+      left: 290.5px;
+      top: 15px;
+      filter: blur(42px);
+      //border: 1px solid white;
+    }
+  }
+
+  &__list {
+    @include column;
+    gap: 1.6rem;
+  }
+
+  &__bullet {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+}
+
+.card {
+  @include column;
+  gap: 3.2rem;
+  text-align: left;
+  margin: 0 4.2rem;
+
+  @include tablet {
+    margin: 0;
+  }
+
+  &__desc {
+    @include column;
+    gap: 2.4rem;
+    padding: 0 2rem;
+  }
+
+  &__text {
+    @include column;
+    gap: 0.8rem;
+    align-items: start;
+  }
+
+  &__footer {
+    display: flex;
+    gap: 1.6rem;
+    padding: 0.4rem;
+  }
+}

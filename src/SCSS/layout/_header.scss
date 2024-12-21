@@ -1,0 +1,70 @@
+@use '../abstracts' as *;
+
+.header {
+  margin: 0 1.6rem;
+  padding: 7.2rem 0;
+
+  @include desktop {
+    max-width: 100rem;
+    margin: auto;
+  }
+
+  &__title {
+    max-width: 60rem;
+    margin: auto;
+    text-align: center;
+  }
+
+  &__tag {
+    margin-bottom: 3.2rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__heading {
+    margin-bottom: 1.6rem;
+  }
+
+  &__button {
+    margin-top: 2.4rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__image {
+    text-align: center;
+    margin-top: 4rem;
+
+    @include tablet {
+      text-align: left;
+    }
+  }
+
+  &__image1 {
+    z-index: -1;
+    position: relative;
+  }
+
+  &__image2 {
+    margin-top: -17%;
+
+    @include tablet {
+      margin-top: -31%;
+      margin-left: 32%;
+    }
+  }
+
+  &__image3 {
+    margin-top: -10%;
+    transform: translateX(40%);
+
+    @include tablet {
+      margin-top: -4.5%;
+      transform: translateX(233%);
+    }
+
+    @include desktop {
+      transform: translateX(70.3rem);
+    }
+  }
+}
