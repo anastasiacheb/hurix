@@ -7,9 +7,7 @@ navButton.addEventListener("click", () => {
 
   if (navMenu.classList.contains("active")) {
     disableScroll();
-    console.log("Menu is already open!");
   } else {
-    console.log("Menu is already closed!");
     enableScroll();
   }
 });
