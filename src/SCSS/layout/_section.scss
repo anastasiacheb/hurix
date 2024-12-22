@@ -327,4 +327,8 @@
       flex-direction: row;
     }
   }
+
+  &__card {
+    flex: 1 1 0;
+  }
 }
