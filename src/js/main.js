@@ -23,8 +23,8 @@ import "aos/dist/aos.css";
 
 AOS.init();
 
-let onLoadElem = document.querySelector(".invisible");
+// let onLoadElem = document.querySelector(".invisible");
 
-window.addEventListener("load", () => {
-  onLoadElem.classList.remove("invisible");
-});
+// window.addEventListener("load", () => {
+//   onLoadElem.classList.remove("invisible");
+// });
