@@ -227,10 +227,14 @@
     }
 
     &_left {
+      height: 65%;
       left: 0;
       bottom: 0;
-      height: 70%;
       width: 20rem;
+
+      @include screen(440px) {
+        height: 70%;
+      }
 
       @include tablet {
         width: 40rem;
@@ -240,8 +244,12 @@
     &_right {
       right: 0;
       bottom: 0;
-      height: 70%;
+      height: 65%;
       width: 20rem;
+
+      @include screen(440px) {
+        height: 70%;
+      }
 
       @include tablet {
         width: 40rem;
