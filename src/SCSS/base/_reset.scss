@@ -1,4 +1,4 @@
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 
 html {
   font-size: 62.5%;
@@ -11,9 +11,21 @@ html {
 }
 
 body {
-  background-color: $black;
+  // background-color: $black;
   color: $white;
   @include inter;
+
+  $dot-bg: $black;
+  $dot-color: rgb(51, 48, 48);
+  $dot-size: 1px;
+  $dot-space: 30px;
+  background:
+    linear-gradient(90deg, $dot-bg calc($dot-space - $dot-size), transparent 1%)
+      center / $dot-space $dot-space,
+    linear-gradient($dot-bg calc($dot-space - $dot-size), transparent 1%)
+      center / $dot-space $dot-space,
+    $dot-color;
+  background-attachment: fixed;
 }
 
 img {
