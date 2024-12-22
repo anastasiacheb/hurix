@@ -1,9 +1,9 @@
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 
 .section {
   margin: 0 1.6rem;
   padding: 9.2rem 0;
-  overflow: hidden;
+  // overflow: hidden;
 
   @include desktop {
     max-width: 100rem;
@@ -76,7 +76,7 @@
   }
 
   &__bullet::before {
-    content: url('/icons/Frame.svg');
+    content: url("/icons/Frame.svg");
     display: inline-block;
     width: 1.6rem;
     height: 1.6rem;
@@ -184,7 +184,7 @@
   }
 
   &__bullet::before {
-    content: url('/icons/check-verified-01.svg');
+    content: url("/icons/check-verified-01.svg");
     display: inline-block;
     width: 2.4rem;
     height: 2.4rem;
